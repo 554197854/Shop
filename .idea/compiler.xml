@@ -11,6 +11,7 @@
         <module name="shop-manager-interface" />
         <module name="shop-manager-pojo" />
         <module name="shop-manager-service" />
+        <module name="shop-manager-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="shop-manager-interface" target="1.7" />
       <module name="shop-manager-pojo" target="1.7" />
       <module name="shop-manager-service" target="1.7" />
+      <module name="shop-manager-web" target="1.7" />
       <module name="shop-parent" target="1.7" />
       <module name="shopmanagerpojo" target="1.7" />
       <module name="taotao-parent" target="1.7" />
