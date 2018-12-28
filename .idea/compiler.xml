@@ -22,6 +22,7 @@
       <module name="shop-manager-service" target="1.7" />
       <module name="shop-parent" target="1.7" />
       <module name="shopmanagerpojo" target="1.7" />
+      <module name="taotao-parent" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

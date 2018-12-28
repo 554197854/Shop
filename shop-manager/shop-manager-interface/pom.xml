@@ -4,12 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>shop-manager</artifactId>
-        <groupId>com.taotao</groupId>
+        <groupId>com.shop</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>jar</packaging>
+
     <artifactId>shop-manager-interface</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+        <!-- 依赖taotao-manager-pojo -->
+        <dependency>
+            <groupId>com.shop</groupId>
+            <artifactId>shop-manager-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

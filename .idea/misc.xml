@@ -9,14 +9,17 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/shop-parent/pom.xml" />
         <option value="$PROJECT_DIR$/shop-common/pom.xml" />
         <option value="$PROJECT_DIR$/shop-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-parent/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/shop-manager/shop-manager-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-manager/shop-manager-interface/pom.xml" />
         <option value="$PROJECT_DIR$/shop-manager/shop-manager-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-manager/shop-manager-service/pom.xml" />
       </set>
     </option>
   </component>
