@@ -16,14 +16,6 @@
         <option value="$PROJECT_DIR$/shop-manager-web/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/shop-manager/shop-manager-dao/pom.xml" />
-        <option value="$PROJECT_DIR$/shop-manager/shop-manager-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/shop-manager/shop-manager-pojo/pom.xml" />
-        <option value="$PROJECT_DIR$/shop-manager/shop-manager-service/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">

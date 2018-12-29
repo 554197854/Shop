@@ -46,5 +46,20 @@
             <artifactId>druid</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <!-- 如果不配置mybatis的配置文件会漏掉 -->
+        <!-- 注意：配置了此方式，原来的默认的资源拷贝行为将无效 -->
+        <!-- 出现类似的错误：java.lang.RuntimeException: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 
 </project>
