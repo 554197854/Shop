@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/shop-content/shop-content-service" />
     <file type="web" url="file://$PROJECT_DIR$/shop-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/shop-manager/shop-manager-service" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-portal-web" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -14,6 +16,9 @@
         <option value="$PROJECT_DIR$/shop-manager/pom.xml" />
         <option value="$PROJECT_DIR$/shop-parent/pom.xml" />
         <option value="$PROJECT_DIR$/shop-manager-web/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-protal-web/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-portal-web/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-content/pom.xml" />
       </list>
     </option>
   </component>

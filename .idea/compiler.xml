@@ -7,15 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="shop-common" />
+        <module name="shop-content-interface" />
+        <module name="shop-content-service" />
         <module name="shop-manager-dao" />
         <module name="shop-manager-interface" />
         <module name="shop-manager-pojo" />
         <module name="shop-manager-service" />
         <module name="shop-manager-web" />
+        <module name="shop-portal-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="shop-common" target="1.7" />
+      <module name="shop-content" target="1.7" />
+      <module name="shop-content-interface" target="1.7" />
+      <module name="shop-content-service" target="1.7" />
       <module name="shop-manager" target="1.7" />
       <module name="shop-manager-dao" target="1.7" />
       <module name="shop-manager-interface" target="1.7" />
@@ -23,6 +29,7 @@
       <module name="shop-manager-service" target="1.7" />
       <module name="shop-manager-web" target="1.7" />
       <module name="shop-parent" target="1.7" />
+      <module name="shop-portal-web" target="1.7" />
       <module name="shopmanagerpojo" target="1.7" />
       <module name="taotao-parent" target="1.7" />
     </bytecodeTargetLevel>

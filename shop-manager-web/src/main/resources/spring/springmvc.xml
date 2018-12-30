@@ -26,10 +26,16 @@
 
     <dubbo:application name="shop-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="192.168.31.99:2181"/>
+
+    <!--shop-manager-service的dubbo服务-->
     <dubbo:reference interface="com.shop.service.TestService" id="testService" />
     <dubbo:reference interface="com.shop.service.ItemParamService" id="itemParamService" />
     <dubbo:reference interface="com.shop.service.ItemService" id="itemService" />
     <dubbo:reference interface="com.shop.service.ItemCatService" id="itemCatService" />
     <dubbo:reference interface="com.shop.service.PicUploadService" id="picUploadService" />
+
+    <!--shop-content-service的dubbo服务-->
+    <dubbo:reference interface="com.shop.content.service.ContentCategoryService" id="contentCategoryService" />
+
 
 </beans>

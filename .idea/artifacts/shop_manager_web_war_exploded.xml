@@ -45,6 +45,9 @@
           <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.2.2" />
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.1" />
           <element id="library" level="project" name="Maven: org.csource:fastdfs-client-java:1.27-SNAPSHOT" />
+          <element id="archive" name="shop-content-interface-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="shop-content-interface" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
