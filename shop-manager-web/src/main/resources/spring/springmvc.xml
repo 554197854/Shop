@@ -11,6 +11,8 @@
 
     <context:component-scan base-package="com.shop.controller"/>
     <mvc:annotation-driven />
+
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp"/>
@@ -32,10 +34,10 @@
     <dubbo:reference interface="com.shop.service.ItemParamService" id="itemParamService" />
     <dubbo:reference interface="com.shop.service.ItemService" id="itemService" />
     <dubbo:reference interface="com.shop.service.ItemCatService" id="itemCatService" />
-    <dubbo:reference interface="com.shop.service.PicUploadService" id="picUploadService" />
+    <dubbo:reference interface="com.shop.service.PicUploadService" id="picUploadService" timeout="5000" />
 
     <!--shop-content-service的dubbo服务-->
     <dubbo:reference interface="com.shop.content.service.ContentCategoryService" id="contentCategoryService" />
-
+    <dubbo:reference interface="com.shop.content.service.ContentService" id="contentService"/>
 
 </beans>

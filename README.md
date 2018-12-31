@@ -9,7 +9,7 @@
     无法找到依赖的错误，解决办法如下：1.所有install都采用Maven goal命令行模式，则都会在C盘默认目录进行编译打包。2.如果要用自己maven配置启动，则在IDEA菜单RUN Edit Configuration中
     编写maven clean tomcat7:run命令。而不再使用右侧面板的Maven goal命令
     
-####项目基础结构关系
+####项目基础结构层级关系
  
     shop-parent  （管理依赖jar包的版本，全局，公司级别版本包）
     |   |--shop-common （通用组件，时间，json等）
@@ -23,7 +23,7 @@
         |--shop.manager.pojo
         |       
         |--shop.manager.service
-        |
+    |    
     |--shop.manager.web  (后台管理系统，表现层)
     |
     |--shop.content (聚合工程)  (门户内容相关服务，服务层)

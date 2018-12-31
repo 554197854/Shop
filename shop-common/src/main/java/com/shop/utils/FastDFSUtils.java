@@ -3,12 +3,14 @@ package com.shop.utils;
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 
+import java.io.Serializable;
+
 /**
  * @author N
  * @create 2018/12/26 -- 1:39
  * @email 554197854@qq.com
  */
-public class FastDFSUtils {
+public class FastDFSUtils implements Serializable {
 
         private TrackerClient trackerClient = null;
         private TrackerServer trackerServer = null;
@@ -33,6 +35,7 @@ public class FastDFSUtils {
             if(fastDFSUtils==null){
 
                 fastDFSUtils = new FastDFSUtils("resource/client.conf");
+
             }
             return fastDFSUtils;
         }

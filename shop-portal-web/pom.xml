@@ -14,11 +14,16 @@
     <packaging>war</packaging>
 <dependencies>
     <!-- manager-interface接口 -->
-    <!--<dependency>-->
-        <!--<groupId>com.shop</groupId>-->
-        <!--<artifactId>shop-manager-interface</artifactId>-->
-        <!--<version>0.0.1-SNAPSHOT</version>-->
-    <!--</dependency>-->
+    <dependency>
+        <groupId>com.shop</groupId>
+        <artifactId>shop-manager-interface</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>com.shop</groupId>
+        <artifactId>shop-content-interface</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
     <!-- Spring -->
     <dependency>
         <groupId>org.springframework</groupId>

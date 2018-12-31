@@ -4,9 +4,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class JsonUtils {
+public class JsonUtils implements Serializable {
 
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();

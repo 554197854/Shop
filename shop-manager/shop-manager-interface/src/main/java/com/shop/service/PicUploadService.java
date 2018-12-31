@@ -1,6 +1,7 @@
 package com.shop.service;
 
 import com.shop.common.EUPicUploadResult;
+import org.csource.common.NameValuePair;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -9,5 +10,5 @@ import org.springframework.web.multipart.MultipartFile;
  * @email 554197854@qq.com
  */
 public interface PicUploadService  {
-    EUPicUploadResult picUpload(MultipartFile file) throws Exception;
+    EUPicUploadResult picUpload(byte[] bytes, String type, NameValuePair[] meta_list) throws Exception;
 }

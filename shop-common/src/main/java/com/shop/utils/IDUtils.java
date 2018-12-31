@@ -1,9 +1,10 @@
 package com.shop.utils;
 
+import java.io.Serializable;
 import java.util.Random;
 
 
-public class IDUtils {
+public class IDUtils implements Serializable {
 
 
 	/**

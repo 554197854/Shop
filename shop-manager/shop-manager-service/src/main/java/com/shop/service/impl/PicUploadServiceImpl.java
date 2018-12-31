@@ -3,6 +3,7 @@ package com.shop.service.impl;
 import com.shop.common.EUPicUploadResult;
 import com.shop.service.PicUploadService;
 import com.shop.utils.FastDFSUtils;
+import org.csource.common.NameValuePair;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,18 +15,14 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class PicUploadServiceImpl implements PicUploadService {
     @Override
-    public EUPicUploadResult picUpload(MultipartFile file) throws Exception {
-        EUPicUploadResult euPicUploadResult = new EUPicUploadResult();
-        if (file == null) {
-            euPicUploadResult.setError(1);
-            euPicUploadResult.setMessage("图片上传错误");
-            return euPicUploadResult;
-        }
-        String pic_type = file.getOriginalFilename();
-        pic_type = pic_type.substring(pic_type.lastIndexOf(".") + 1);
+    public EUPicUploadResult picUpload(byte[] bytes, String type, NameValuePair[] meta_list) throws Exception {
+
+        EUPicUploadResult euPicUploadResult=new EUPicUploadResult();
+
         try {
             FastDFSUtils fastDFSUtils = FastDFSUtils.getFastDFS();
-            String url = fastDFSUtils.uploadFile(file.getBytes(), pic_type, null);
+            String url = fastDFSUtils.uploadFile(bytes,type,meta_list);
+            System.out.println(url);
             euPicUploadResult.setUrl(url);
             euPicUploadResult.setError(0);
             return euPicUploadResult;
