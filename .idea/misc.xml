@@ -5,6 +5,9 @@
     <file type="web" url="file://$PROJECT_DIR$/shop-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/shop-manager/shop-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/shop-portal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-search/shop-search-service" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-search/shop-search-web" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -19,7 +22,14 @@
         <option value="$PROJECT_DIR$/shop-protal-web/pom.xml" />
         <option value="$PROJECT_DIR$/shop-portal-web/pom.xml" />
         <option value="$PROJECT_DIR$/shop-content/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-search/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-search-web/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/shop-search/shop-search-web/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">

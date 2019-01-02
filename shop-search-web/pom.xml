@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>shop-manager</artifactId>
+        <artifactId>shop-parent</artifactId>
         <groupId>com.shop</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../shop-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shop-manager-service</artifactId>
+    <artifactId>shop-search-web</artifactId>
     <packaging>war</packaging>
 
+
     <dependencies>
-        <!-- 添加接口的依赖 -->
         <dependency>
             <groupId>com.shop</groupId>
-            <artifactId>shop-manager-interface</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.shop</groupId>
-            <artifactId>shop-manager-dao</artifactId>
+            <artifactId>shop-search-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Spring -->
@@ -52,6 +49,23 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
+        <!-- JSP相关 -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
@@ -75,25 +89,16 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.csource</groupId>
-            <artifactId>fastdfs-client-java</artifactId>
-        </dependency>
     </dependencies>
     <build>
         <plugins>
-            <!-- 配置打包时跳过测试 ，首次配置使用的时候会自动联网进行下载 -->
+            <!-- 配置tomcat插件 -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <!-- 跳过测试 -->
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <skipTests>true</skipTests>
+                    <port>8085</port>
+                    <path>/</path>
                 </configuration>
             </plugin>
         </plugins>

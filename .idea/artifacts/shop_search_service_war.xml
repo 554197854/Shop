@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="shop-search-service:war">
+    <output-path>$PROJECT_DIR$/shop-search/shop-search-service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>shop-search-service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="shop-search-service.war">
+      <element id="artifact" artifact-name="shop-search-service:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>shop-manager</artifactId>
+        <artifactId>shop-search</artifactId>
         <groupId>com.shop</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>shop-manager-service</artifactId>
+    <artifactId>shop-search-service</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
         <!-- 添加接口的依赖 -->
         <dependency>
             <groupId>com.shop</groupId>
-            <artifactId>shop-manager-interface</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.shop</groupId>
-            <artifactId>shop-manager-dao</artifactId>
+            <artifactId>shop-search-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Spring -->
@@ -75,15 +71,7 @@
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
         </dependency>
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.csource</groupId>
-            <artifactId>fastdfs-client-java</artifactId>
-        </dependency>
     </dependencies>
     <build>
         <plugins>

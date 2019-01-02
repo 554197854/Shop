@@ -13,5 +13,10 @@
     <file url="file://$PROJECT_DIR$/shop-manager/shop-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-portal-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/shop-search-web" charset="UTF-8" />
   </component>
 </project>
