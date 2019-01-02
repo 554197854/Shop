@@ -40,4 +40,7 @@
     <dubbo:reference interface="com.shop.content.service.ContentCategoryService" id="contentCategoryService" />
     <dubbo:reference interface="com.shop.content.service.ContentService" id="contentService"/>
 
+    <!--shop-search-service的dubbo服务-->
+    <dubbo:reference interface="com.shop.search.service.SearchService" id="searchService"/>
+
 </beans>
