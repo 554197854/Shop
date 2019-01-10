@@ -14,22 +14,33 @@
     shop-parent  （管理依赖jar包的版本，全局，公司级别版本包）
     |   |--shop-common （通用组件，时间，json等）
     |          
-    |--shop-manager  （聚合工程）(商品相关服务，服务层)
+    |--shop-manager  （聚合工程）(商品后台系统，服务层)
         |
-        |--shop.manager.dao
+        |--shop-manager-dao
         |      
-        |--shop.manager.interface
+        |--shop-manager-interface
         |       
-        |--shop.manager.pojo
+        |--shop-manager-pojo
         |       
-        |--shop.manager.service
+        |--shop-manager-service
     |    
-    |--shop.manager.web  (后台管理系统，表现层)
+    |--shop-manager-web  (商品后台系统，表现层)
     |
-    |--shop.content (聚合工程)  (门户内容相关服务，服务层)
+    |--shop-content (聚合工程)  (门户展示系统，服务层)
          |
-         |--shop.content.interface
+         |--shop-content-interface
          |   
-         |--shop.content.service  
+         |--shop-content-service  
          |
-        
+    |--shop-portal-web (门户展示系统，表现层)    
+    |
+    |--shop-search (solr搜索服务系统，服务层)
+         |
+         |--shop-search-interface
+         |
+         |--shop-search-service
+         |
+    |--shop-search-web (solr搜索系统，表现层)
+    |
+    |--shop-item-web (商品详情展示系统，表现层)
+    

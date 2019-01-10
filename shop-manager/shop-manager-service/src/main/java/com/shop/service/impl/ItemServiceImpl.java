@@ -14,8 +14,16 @@ import com.shop.pojo.TbItemParamItem;
 import com.shop.service.ItemService;
 import com.shop.utils.IDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import javax.annotation.Resources;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
 import java.util.Date;
 import java.util.List;
 
@@ -35,8 +43,15 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private TbItemMapper tbItemMapper;
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
+
+    @Resource(name = "topicDestination")
+    private Destination destination;
+
     @Override
-    public TbItem getItemById(long id) {
+    public TbItem getItemById(Long id) {
         return tbItemMapper.selectByPrimaryKey(id);
     }
 
@@ -58,7 +73,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public ShopMsgResult insertItem(TbItem tbItem, String desc, String paramData) {
-        long id = IDUtils.genItemId();
+        final long id = IDUtils.genItemId();
         tbItem.setId(id);
         tbItem.setStatus((byte)1);
         Date date = new Date();
@@ -79,7 +94,20 @@ public class ItemServiceImpl implements ItemService {
         tbItemParamItem.setCreated(date);
         tbItemParamItem.setUpdated(date);
         tbItemParamItemMapper.insert(tbItemParamItem);
+        solrupdate(id);
+
 
         return ShopMsgResult.ok();
+    }
+
+
+    public void solrupdate(final long id){
+        jmsTemplate.send(destination, new MessageCreator() {
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                return session.createTextMessage(id+"");
+
+            }
+        });
     }
 }

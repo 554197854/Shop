@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/shop-content/shop-content-service" />
+    <file type="web" url="file://$PROJECT_DIR$/shop-item-web" />
     <file type="web" url="file://$PROJECT_DIR$/shop-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/shop-manager/shop-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/shop-portal-web" />
@@ -24,6 +25,7 @@
         <option value="$PROJECT_DIR$/shop-content/pom.xml" />
         <option value="$PROJECT_DIR$/shop-search/pom.xml" />
         <option value="$PROJECT_DIR$/shop-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-item-web/pom.xml" />
       </list>
     </option>
   </component>

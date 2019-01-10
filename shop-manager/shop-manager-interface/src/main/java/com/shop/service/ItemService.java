@@ -12,10 +12,12 @@ import com.shop.pojo.TbItem;
 
 public interface ItemService {
 
-    TbItem getItemById(long id);
+    TbItem getItemById(Long id);
 
     EUDataGridResult getItemList(int page, int rows);
 
     ShopMsgResult insertItem(TbItem tbItem, String desc, String paramData);
+
+
 
 }

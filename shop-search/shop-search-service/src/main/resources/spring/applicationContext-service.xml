@@ -10,7 +10,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
     <!-- 扫描包加载Service实现类 -->
-    <context:component-scan base-package="com.shop.search.service" />
+    <context:component-scan base-package="com.shop.search"/>
 
     <dubbo:application name="shop-search" />
     <dubbo:registry protocol="zookeeper" address="192.168.31.99:2181" />
