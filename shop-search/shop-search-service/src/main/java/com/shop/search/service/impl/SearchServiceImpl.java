@@ -80,18 +80,7 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public ShopMsgResult updateSearchItem(Long item_id) throws Exception {
-        SearchItem searchItem = mapper.getSearchItemById(item_id);
-        SolrInputDocument document= new SolrInputDocument();
-        document.addField("id",searchItem.getId()+"");
-        document.addField("item_title",searchItem.getTitle());
-        document.addField("item_sell_point",searchItem.getSell_point());
-        document.addField("item_price",searchItem.getPrice());
-        document.addField("item_image",searchItem.getImage());
-        document.addField("item_category_name",searchItem.getCategory_name());
-        document.addField("item_desc",searchItem.getItem_desc());
-        //添加到索引库
-        solrServer.add(document);
-        solrServer.commit();
-        return ShopMsgResult.ok();
+
+        return searchDao.updateSearchItem(item_id);
     }
 }

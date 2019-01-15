@@ -23,8 +23,11 @@ public class ItemChangeListener implements MessageListener {
         if (message instanceof TextMessage) {
             try {
                 String item_id = ((TextMessage) message).getText();
+                System.out.println("receive:"+item_id);
                 searchService.updateSearchItem(Long.parseLong(item_id));
+
             } catch (Exception e) {
+                System.out.println("receive error");
                 e.printStackTrace();
             }
 

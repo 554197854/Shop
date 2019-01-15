@@ -18,5 +18,10 @@
     <file url="file://$PROJECT_DIR$/shop-search-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-search/shop-search-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-search/shop-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-sso-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-sso/shop-sso-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-sso/shop-sso-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-sso/shop-sso-service" charset="UTF-8" />
   </component>
 </project>

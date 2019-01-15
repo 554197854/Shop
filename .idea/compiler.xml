@@ -19,6 +19,9 @@
         <module name="shop-search-interface" />
         <module name="shop-search-service" />
         <module name="shop-search-web" />
+        <module name="shop-sso-interface" />
+        <module name="shop-sso-service" />
+        <module name="shop-sso-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -39,6 +42,10 @@
       <module name="shop-search-interface" target="1.7" />
       <module name="shop-search-service" target="1.7" />
       <module name="shop-search-web" target="1.7" />
+      <module name="shop-sso" target="1.7" />
+      <module name="shop-sso-interface" target="1.7" />
+      <module name="shop-sso-service" target="1.7" />
+      <module name="shop-sso-web" target="1.7" />
       <module name="shopmanagerpojo" target="1.7" />
       <module name="taotao-parent" target="1.7" />
     </bytecodeTargetLevel>

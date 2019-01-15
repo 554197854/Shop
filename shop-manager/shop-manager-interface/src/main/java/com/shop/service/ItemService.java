@@ -3,6 +3,8 @@ package com.shop.service;
 import com.shop.common.EUDataGridResult;
 import com.shop.common.ShopMsgResult;
 import com.shop.pojo.TbItem;
+import com.shop.pojo.TbItemDesc;
+import com.shop.pojo.TbItemParamItem;
 
 /**
  * @author N
@@ -18,6 +20,9 @@ public interface ItemService {
 
     ShopMsgResult insertItem(TbItem tbItem, String desc, String paramData);
 
+    TbItemDesc getItemDescById(Long item_id);
+
+    TbItemParamItem geItemParamItemByItemId(Long item_id);
 
 
 }

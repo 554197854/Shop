@@ -2,12 +2,15 @@ package com.shop.search.dao;
 
 import com.shop.common.SearchItem;
 import com.shop.common.SearchResult;
+import com.shop.common.ShopMsgResult;
+import com.shop.search.mapper.SearchItemMapper;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
+import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -26,6 +29,9 @@ public class SearchDao {
     //1.创建solrserver对象
     @Autowired
     private SolrServer solrServer;
+
+    @Autowired
+    private SearchItemMapper mapper;
 
     public SearchResult search(SolrQuery query) throws Exception {
 
@@ -64,5 +70,21 @@ public class SearchDao {
         return searchResult;
     }
 
+    public ShopMsgResult updateSearchItem(Long item_id) throws Exception{
+        SearchItem searchItem = mapper.getSearchItemById(item_id);
+        SolrInputDocument document= new SolrInputDocument();
+        document.addField("id",searchItem.getId()+"");
+        document.addField("item_title",searchItem.getTitle());
+        document.addField("item_sell_point",searchItem.getSell_point());
+        document.addField("item_price",searchItem.getPrice());
+        document.addField("item_image",searchItem.getImage());
+        document.addField("item_category_name",searchItem.getCategory_name());
+        document.addField("item_desc",searchItem.getItem_desc());
+        //添加到索引库
+        solrServer.add(document);
+        solrServer.commit();
+        System.out.println("commit:"+item_id);
+        return  ShopMsgResult.ok();
+    }
 
 }
