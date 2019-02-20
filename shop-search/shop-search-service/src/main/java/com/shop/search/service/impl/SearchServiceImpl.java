@@ -13,6 +13,7 @@ import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.naming.ldap.SortKey;
 import java.util.List;
 
 /**
